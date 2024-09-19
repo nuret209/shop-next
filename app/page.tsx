@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className="search relative border-[1px] border-[solid] border-[#e5e7eb] flex sm:pl-[24px] py-2 pl-2 rounded-[100px] items-center  before:top-[6px]  sm:before:top-[14px] before:left-[95px] sm:before:left-[122px] before:content-[''] before:absolute before:bg-[#e5e7eb] before:h-[24px] before:w-px">
 
-            <select className="text-sm w-[89px]  sm:mr-[20px]  mr-2 cursor-pointer font-medium s sm:my-[8px] appearance-none outline-0 bg-transparent border-[0PX] max-[600px]:m-0" onChange={(e: Event) => setCity(e.target.value)} name="il" id="il">
+            <select className="text-sm w-[89px]  sm:mr-[20px]  mr-2 cursor-pointer font-medium s sm:my-[8px] appearance-none outline-0 bg-transparent border-[0PX] max-[600px]:m-0" onChange={(e: React.FormEvent<HTMLInputElement>) => setCity(e.target.value)} name="il" id="il">
               <option value="">İl</option>
               {iller.map(il => <option key={il.id} value={il.id}>{il.name}</option>)}
             </select>
