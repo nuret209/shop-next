@@ -27,7 +27,7 @@ export default function Home() {
       <main>
         <div className="top-banner max-[600px]:text-[9px] flex justify-center h-[54px] items-center relative text-white bg-topBannerBG">
           <span className="firstText text-transparent bg-[linear-gradient(89.73deg,_#FFFFFF_0%,_#D7DBFF_1.33%,_#EDFFAC_76.53%)] bg-clip-text">
-             İşletminizi wagmigg ' ye taşıyın!
+          ⚡ İşletminizi wagmigg ' ye taşıyın!
 
           </span>
           <span className="dot relative max-[600px]:mx-1 mr-3 ml-3 bg-white block h-1 w-1 rounded-full">
@@ -133,7 +133,6 @@ export default function Home() {
                   rates={cafe.rates}
                   price={cafe.price}
                   distance={cafe.distance}
-                  img={'cafe.jpg'}
                 />
               ))}
             </div>

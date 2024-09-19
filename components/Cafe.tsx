@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image'
 import imgData from "./cafe.jpg"
 interface CafeProps {
-    img: string;
     favorite: boolean;
     title: string;
     distance: string;
@@ -11,7 +10,7 @@ interface CafeProps {
     rates: string;
 }
 
-export default function Cafe({ img, favorite, title, distance, date, price, rates } : CafeProps) {
+export default function Cafe({favorite, title, distance, date, price, rates } : CafeProps) {
     const [heartActive, setheartActive] = React.useState(false);
     return (<>
         <div className="cafe sm:mr-[20px] mb-[40px] max-w-[270px] relative text-[15px] text-[#717171]">
