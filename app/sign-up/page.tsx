@@ -60,8 +60,8 @@ export default function signUp() {
             </svg>
 
           </div>
-          <span className="find flex sm:w-[392px] justify-center text-center mb-[24px] font-['Satoshi',_sans-serif] font-extrabold text-[44px] bg-[linear-gradient(180deg,_#000_0%,_#151515_89.17%)] bg-clip-text">
-            en yakın oyun merkezini bul.
+          <span className="find w-[350px] sm:w-[392px] text-center mb-[24px] font-['Satoshi',_sans-serif] font-extrabold text-[44px] bg-[linear-gradient(180deg,_#000_0%,_#151515_89.17%)] bg-clip-text">
+            en ya<span className="text-[34.4px] font-bold">K</span>ı<span className="text-[34.4px] font-bold">N</span> oyu<span className="text-[34.4px] font-bold">N</span> mer<span className="text-[34.4px] font-bold">K</span>ezini bul.
           </span>
           <button className="signUpButton flex items-center justify-center box-border cursor-pointer gap-[4px] [box-shadow:0px_1px_2px_rgba(27,_28,_29,_0.48),_0px_0px_0px_1px_#242628] rounded-[10px] h-[40px] w-[200px] sm:w-[392px] outline-[0] border-[0px] bg-[#0a0d14] text-[white]">
             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
