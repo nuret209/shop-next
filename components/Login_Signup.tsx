@@ -2,7 +2,7 @@ import React from 'react'
 import LoginLogo from './LoginLogo'
 import { FaGoogle } from "react-icons/fa";
 import { TbWorld } from 'react-icons/tb';
-import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown,  IoMdArrowForward } from 'react-icons/io';
 
 interface Login_SignupProps {
     path: string;
@@ -27,21 +27,19 @@ const Login_Signup = ({ path, pathName }: Login_SignupProps) => {
                 {/* Sign-up Link */}
                 <span className="mt-6 sm:w-[392px] flex justify-center text-[#525866]">
                     Hesabınız yok mu?
-                    <a className="text-[#0a0d14] flex items-center ml-1 hover:underline" href={path}>
+                    <a className="text-[#0a0d14] flex items-center ml-1 hover:underline gap-[2px]" href={path}>
                         {pathName}
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.129 5.25L5.106 1.227L6.1665 0.166504L12 6L6.1665 11.8335L5.106 10.773L9.129 6.75H0V5.25H9.129Z" fill="#0A0D14" />
-                        </svg>
+                        <IoMdArrowForward />
                     </a>
                 </span>
             </div>
 
             {/* Footer Section */}
-            <div className='w-full flex justify-between p-5'>
-                <div className="copyright">© 2024 wagmigg Teknoloji A.Ş.</div>
-                <div className="lang flex items-center">
+            <div className='w-full flex justify-between p-5 text-base pointer-events-none select-none'>
+                <div className="copyright text-[#525866]">© 2024 wagmigg Teknoloji A.Ş.</div>
+                <div className="lang flex items-center text-[#525866]">
                     <TbWorld />
-                    <span className="ml-1 flex items-center">
+                    <span className="ml-1 flex items-center ">
                         TR <IoIosArrowDown />
                     </span>
                 </div>
