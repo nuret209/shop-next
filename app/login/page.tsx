@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function Login() {
   return (
     <>  
-      <EndBanner />
       <Login_Signup path="/signup" pathName="Kayıt Ol"/>
     </>
   )

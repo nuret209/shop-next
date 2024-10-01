@@ -1,7 +1,8 @@
 import React from 'react'
 import LoginLogo from './LoginLogo'
-import { FaGoogle, FaArrowRight, } from "react-icons/fa";
-
+import { FaGoogle } from "react-icons/fa";
+import { TbWorld } from 'react-icons/tb';
+import { IoIosArrowDown } from 'react-icons/io';
 
 interface Login_SignupProps {
     path: string;
@@ -10,25 +11,44 @@ interface Login_SignupProps {
 
 const Login_Signup = ({ path, pathName }: Login_SignupProps) => {
     return (
-        <div className="login w-full h-full flex absolute items-center justify-center">
-            <div className="loginArea flex flex-col items-center">
-                <div className="logo flex justify-center">
-                    <LoginLogo />
-                </div>
-                <span className="find w-[350px] sm:w-[392px] text-center mb-[24px] font-['Satoshi',_sans-serif] font-extrabold text-[44px] bg-[linear-gradient(180deg,_#000_0%,_#151515_89.17%)] bg-clip-text">
-                    en ya<span className="text-[34.4px] font-bold">K</span>ı<span className="text-[34.4px] font-bold">N</span> oyu<span className="text-[34.4px] font-bold">N</span> mer<span className="text-[34.4px] font-bold">K</span>ezini bul.
+        <div className="h-dvh w-full flex flex-col justify-between">
+            {/* Empty Space */}
+            <div className='w-full' />
+
+            {/* Login Section */}
+            <div className='w-full min-h-60 flex flex-col items-center justify-center'>
+                <LoginLogo />
+                <span className="text-center mb-6 font-sans font-extrabold text-[44px] bg-gradient-to-b from-black to-[#151515] bg-clip-text text-transparent">
+                    en ya<span className="text-[34.4px] font-bold">K</span>ı<span className="text-[34.4px] font-bold">N</span> oyu<span className="text-[34.4px] font-bold">N</span> <br /> mer<span className="text-[34.4px] font-bold">K</span>ezini bul.
                 </span>
-                <button className="loginButton flex items-center justify-center box-border cursor-pointer gap-[4px] [box-shadow:0px_1px_2px_rgba(27,_28,_29,_0.48),_0px_0px_0px_1px_#242628] rounded-[10px] h-10 w-[200px] sm:w-[392px] outline-[0] border-[0px] bg-[#0a0d14] text-[white]">
+
+                {/* Google Sign-In Button */}
+                <button className="flex items-center justify-center gap-1 shadow-md rounded-lg h-[40px] w-[200px] sm:w-[392px] bg-[#0a0d14] text-white">
                     <FaGoogle />
                     Google ile giriş yap
                 </button>
-                <span className="toSignUp mt-[24px] flex justify-center  text-[#525866]">
+
+                {/* Sign-up Link */}
+                <span className="mt-6 sm:w-[392px] flex justify-center text-[#525866]">
                     Hesabınız yok mu?
-                    <a className="text-[#0a0d14] flex gap-1 items-center ml-[4px] hover:underline" href={path}>
-                        {pathName}
-                        <FaArrowRight className='mt-[-2px]' />
+                    <a className="text-[#0a0d14] flex items-center ml-1 hover:underline" href="/login">
+                        Giriş Yap
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.129 5.25L5.106 1.227L6.1665 0.166504L12 6L6.1665 11.8335L5.106 10.773L9.129 6.75H0V5.25H9.129Z" fill="#0A0D14" />
+                        </svg>
                     </a>
                 </span>
+            </div>
+
+            {/* Footer Section */}
+            <div className='w-full flex justify-between p-5'>
+                <div className="copyright">© 2024 wagmigg Teknoloji A.Ş.</div>
+                <div className="lang flex items-center">
+                    <TbWorld />
+                    <span className="ml-1 flex items-center">
+                        TR <IoIosArrowDown />
+                    </span>
+                </div>
             </div>
         </div>
     )

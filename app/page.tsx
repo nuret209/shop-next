@@ -11,7 +11,6 @@ export default function Home() {
         <TopBanner />
         <TopComponent />
         <MainComponent />
-      
       </main>
     </>
   );
