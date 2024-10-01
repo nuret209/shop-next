@@ -1,4 +1,3 @@
-import EndBanner from "@/components/EndBanner";
 import Login_Signup from "@/components/Login_Signup";
 import { Metadata } from "next";
 

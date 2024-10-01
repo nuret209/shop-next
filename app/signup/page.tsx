@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import EndBanner from "@/components/EndBanner";
 import Login_Signup from "@/components/Login_Signup";
 
 export const metadata: Metadata = {
