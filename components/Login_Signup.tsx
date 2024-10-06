@@ -4,7 +4,7 @@ import LoginLogo from './LoginLogo'
 import { FaGoogle } from "react-icons/fa";
 import { TbWorld } from 'react-icons/tb';
 import { IoIosArrowDown, IoMdArrowForward } from 'react-icons/io';
-import { useSignIn } from '@clerk/nextjs';
+import { useSignUp } from '@clerk/nextjs';
 
 interface Login_SignupProps {
     path: string;
@@ -12,11 +12,11 @@ interface Login_SignupProps {
 }
 
 const Login_Signup = ({ path, pathName }: Login_SignupProps) => {
-    const { signIn } = useSignIn();
+    const { signUp } = useSignUp();
     const handleGoogleSignUp = async () => {
         try {
-            if (signIn !== undefined) {
-                signIn.authenticateWithRedirect({
+            if (signUp !== undefined) {
+                signUp.authenticateWithRedirect({
                     strategy: 'oauth_google',
                     redirectUrl: '/',  // The URL to redirect after sign-up
                     redirectUrlComplete: '/',    // After completion
