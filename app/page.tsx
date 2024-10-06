@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { sign } from "@/lib/sign";
 
 export default function Home() {
-  useEffect(async () => {
+  useEffect(() => {
     sign();
   })
   return (
