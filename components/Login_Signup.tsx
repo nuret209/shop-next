@@ -14,15 +14,13 @@ interface Login_SignupProps {
 const Login_Signup = ({ path, pathName }: Login_SignupProps) => {
     const { signIn } = useSignIn();
     const handleGoogleSignUp = async () => {
-        console.log("hello");
-
         try {
             if (signIn !== undefined) {
-                await signIn.authenticateWithRedirect({
+                signIn.authenticateWithRedirect({
                     strategy: 'oauth_google',
                     redirectUrl: '/',  // The URL to redirect after sign-up
                     redirectUrlComplete: '/',    // After completion
-                });
+                })
             }
         } catch (err) {
             console.error('Google sign-up failed', err);

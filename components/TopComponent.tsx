@@ -5,7 +5,7 @@ import ilceler from "@/data/ilceler.json"
 import Pop_up from "@/components/Pop_up"
 import React, { useEffect } from "react"
 import Image from "next/image"
-import { getFullName, getProfileImage } from "./User"
+import { getFullName, getProfileImage } from "../lib/User"
 const TopComponent = () => {
   const [city, setCity] = React.useState(0);
   const [pop_upActive, setPop_upActive] = React.useState(false);
@@ -13,9 +13,6 @@ const TopComponent = () => {
   const [fullName, setFullName] = React.useState("");
   useEffect(() => {
     getProfileImage().then(res => setProfileImage(res ? res : ""));
-    getProfileImage().then(res => console.log(res)
-    );
-
     getFullName().then(res => setFullName(res));
 
   }, [])
@@ -28,11 +25,11 @@ const TopComponent = () => {
 
         <select className="text-sm w-[89px]  sm:mr-[20px]  mr-2 cursor-pointer font-medium s sm:my-[8px] appearance-none outline-0 bg-transparent border-[0PX] max-[600px]:m-0" onChange={(e) => setCity(+e.target.value)} name="il" id="il">
           <option value="">İl</option>
-          {iller.map(il => <option key={il.id} value={il.id}>{il.name}</option>)}
+          {iller.map(il => <option key={il.id} value={il.id}><label>{il.name}</label></option>)}
         </select>
         <select className="text-sm w-[89px] cursor-pointer font-medium sm:my-[8px] my-1  appearance-none outline-0 bg-transparent border-[0PX] max-[600px]:m-0" name="ilce" id="ilce">
           <option value="">İlçe</option>
-          {ilceler.map(ilce => (city == +ilce.il_id && <option key={ilce.id} value={ilce.id}>{ilce.name}</option>))}
+          {ilceler.map(ilce => (city == +ilce.il_id && <option key={ilce.id} value={ilce.id}><label>{ilce.name}</label></option>))}
         </select>
         <div className="searchIcon stroke-[white] sm:h-[32px] h-[22px] w-[22px] sm:w-[32px] mr-[4px] sm:mr-[6px] bg-[#0a0d14] rounded-[100px] flex items-center justify-center ml-2 sm:ml-[16px]" >
           <Image src="/images/searchIcon.svg" alt="Site Logo" width={20} height={21} />
