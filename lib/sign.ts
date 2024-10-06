@@ -1,11 +1,12 @@
+"use server"
 import { prisma } from "@/lib/prisma";
 import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-export async function GET() {
+export async function sign() {
     try {
         const user = await currentUser();
-        if (!user)
-            return NextResponse.json({ message: "there is no account" });
+        if (!user)     
+            return "there is no account";
         const loggedInUser = await prisma.user.findUnique({ where: { id: user.id } });
         if (!loggedInUser) {
             await prisma.user.create(
@@ -20,11 +21,11 @@ export async function GET() {
                     }
                 }
             );
-            return NextResponse.json({ message: "created" })
+            return  "created";
 
         } else
-            return NextResponse.json({ message: "already created" })
+            return  "already created" 
     } catch (err) {
-        return NextResponse.json({ message: err })
+        return  err 
     }
 }
