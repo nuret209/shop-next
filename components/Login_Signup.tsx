@@ -1,8 +1,10 @@
+"use client"
 import React from 'react'
 import LoginLogo from './LoginLogo'
 import { FaGoogle } from "react-icons/fa";
 import { TbWorld } from 'react-icons/tb';
-import { IoIosArrowDown,  IoMdArrowForward } from 'react-icons/io';
+import { IoIosArrowDown, IoMdArrowForward } from 'react-icons/io';
+import { useSignIn } from '@clerk/nextjs';
 
 interface Login_SignupProps {
     path: string;
@@ -10,6 +12,22 @@ interface Login_SignupProps {
 }
 
 const Login_Signup = ({ path, pathName }: Login_SignupProps) => {
+    const { signIn } = useSignIn();
+    const handleGoogleSignUp = async () => {
+        console.log("hello");
+
+        try {
+            if (signIn !== undefined) {
+                await signIn.authenticateWithRedirect({
+                    strategy: 'oauth_google',
+                    redirectUrl: '/',  // The URL to redirect after sign-up
+                    redirectUrlComplete: '/',    // After completion
+                });
+            }
+        } catch (err) {
+            console.error('Google sign-up failed', err);
+        }
+    };
     return (
         <div className="h-dvh w-full flex flex-col justify-between">
             <div className='w-full' />
@@ -19,7 +37,7 @@ const Login_Signup = ({ path, pathName }: Login_SignupProps) => {
                     en ya<span className="text-[34.4px] font-bold">K</span>ı<span className="text-[34.4px] font-bold">N</span> oyu<span className="text-[34.4px] font-bold">N</span> <br /> mer<span className="text-[34.4px] font-bold">K</span>ezini bul.
                 </span>
                 {/* Google Sign-In Button */}
-                <button className="flex items-center justify-center gap-1 shadow-md rounded-lg h-[40px] w-[200px] sm:w-[392px] bg-[#0a0d14] text-white">
+                <button onClick={handleGoogleSignUp} className="flex items-center justify-center gap-1 shadow-md rounded-lg h-[40px] w-[200px] sm:w-[392px] bg-[#0a0d14] text-white">
                     <FaGoogle />
                     Google ile giriş yap
                 </button>
