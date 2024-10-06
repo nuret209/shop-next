@@ -13,11 +13,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User{
- id String @id 
- email String
- firstName String
- lastName String
- createdAt BigInt
- imageURL String
+model User {
+  id        String @id
+  email     String
+  firstName String
+  lastName  String
+  createdAt BigInt
+  imageURL  String
+}
+
+model Organization {
+  id             String @id @default(uuid())
+  name           String @unique
+  slug           String
+  adrress        String
+  ScorePoint     String
+  image Image?
+  NumberOfClicks Int
+}
+
+model Image {
+  ImageUrl         String
+  organization     Organization @relation(fields: [OrganizationName], references: [name])
+  OrganizationName String       @unique
 }
