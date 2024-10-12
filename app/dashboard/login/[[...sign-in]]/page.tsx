@@ -105,7 +105,7 @@ const Page = () => {
                 'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
               )
             } >Kayıt Ol</button>
-
+ <span className='text-white'>Hesabın yoksa <a href="/dashboard/register" className='hover:text-gray-500'>Kayıt Ol</a></span>
           </div>
         </form>
       </main >

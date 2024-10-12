@@ -187,7 +187,7 @@ const Page = () => {
               />
               <label htmlFor='file' className={
                 clsx(
-                  'mb-6 inline-flex mt-3  rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
+                  'inline-flex mt-3  rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
                   'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
                 )
               }>
@@ -196,11 +196,13 @@ const Page = () => {
 
               <button type="submit" className={
                 clsx(
-                  ' mt-3 flex rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
+                  ' mt-3 flex rounded-lg h-9 border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
                   'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
                 )
               } >Kayıt Ol</button>
             </div>
+            <span className='text-white'>Hesabın varsa <a href="/dashboard/login" className='hover:text-gray-500'>Giriş yap</a></span>
+
           </div>
         </form>
       </main>
