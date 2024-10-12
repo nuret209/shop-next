@@ -11,8 +11,7 @@ interface RegisterProps {
 };
 
 export async function registerPrisma(formData: RegisterProps) {
-   
-
+    console.log("hello");
     const user = await prisma.organization.create({
         data: {
             name: formData.name,

@@ -45,7 +45,7 @@ const Page = () => {
         }
         await signUp.prepareEmailAddressVerification({ strategy: "email_code" })
         setEmailActive(true);
-      } catch (err) { 
+      } catch (err) {
         setError(err.errors[0].message);
       };
   }
@@ -70,8 +70,7 @@ const Page = () => {
       }
       if (completeSignUp.status === "complete") {
         await setActive({ session: completeSignUp.createdSessionId })
-        registerPrisma(formData);
-
+        await registerPrisma(formData);
         router.push(`/dashboard/${formData.name}`);
       }
     } catch (err) {
