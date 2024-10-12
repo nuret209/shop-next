@@ -2,7 +2,7 @@ import { TabGroup, TabList, Tab } from "@headlessui/react";
 import { useContext, useEffect } from "react";
 import { RiHomeSmile2Line, RiContactsBookLine , RiSettingsFill} from "react-icons/ri";
 import { DasboardContext } from "./context";
-import { GiSpanner } from "react-icons/gi";
+
 
 const EndTab = () => {
     const { page, setPage } = useContext(DasboardContext);
