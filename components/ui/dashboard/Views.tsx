@@ -23,16 +23,17 @@ const Views = () => {
                     {TimeTexts[timeId]}
                 </span>
             </div>
-            <div className="flex justify-between mt-12">
+            <div className="flex flex-col md:flex-row  justify-between mt-12">
                 <div className='flex p-4 relative gap-3 items-center w-full text-[#525866] 
-                after:absolute after:h-[calc(100%-20px)] after:w-px after:bg-[#e3e4e8] after:bottom-[10px] after:right-[24px]'>
+                md:after:absolute md:after:h-[calc(100%-20px)] md:after:w-px md:after:bg-[#e3e4e8] amd:fter:bottom-[10px] md:after:right-[24px]'>
                     <div className="p-3 bg-[#f6f8fa] rounded-full"><IoMoonOutline size={24} /></div>
                     <div className='flex flex-col'>
                         <span className='text-[#0A0D14] font-medium'>Toplam Sayfa Ziyaretçim</span>
                         <span>180</span>
                     </div>
                 </div>
-                <div className='flex p-4 gap-3 relative items-center w-full text-[#525866]  after:absolute after:h-[calc(100%-20px)] after:w-px after:bg-[#e3e4e8] after:bottom-[10px] after:right-[24px]'>
+                <div className='flex p-4 gap-3 relative items-center w-full text-[#525866]  
+                md:after:absolute md:after:h-[calc(100%-20px)] md:after:w-px md:after:bg-[#e3e4e8] amd:fter:bottom-[10px] md:after:right-[24px]'>
                     <div className="p-3 bg-[#f6f8fa] rounded-full"><IoMoonOutline size={24} /></div>
                     <div className='flex flex-col'>
                         <span className='text-[#0A0D14] font-medium'>Toplam Sayfa Ziyaretçim</span>

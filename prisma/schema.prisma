@@ -26,14 +26,16 @@ model Organization {
   id             String @id @default(uuid())
   name           String @unique
   slug           String
-  adrress        String
-  ScorePoint     String
+  email          String
+  adrressOrg        String
+  ScorePoint     Int @default(0)
+  password String
   image Image?
-  NumberOfClicks Int
+  NumberOfClicks Int @default(0)
 }
 
 model Image {
-  ImageUrl         String
+  Image         String
   organization     Organization @relation(fields: [OrganizationName], references: [name])
   OrganizationName String       @unique
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider} from "@clerk/nextjs";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   title: "wagmigg - shop",
@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
+
       <html lang="en">
         <body
           className={`${inter.className}  antialiased`}

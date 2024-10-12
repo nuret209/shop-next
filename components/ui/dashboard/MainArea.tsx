@@ -8,10 +8,10 @@ import Copyright from './Copyright'
 
 const MainArea = () => {
     return (
-        <div className="bg-[#f6f8fa] w-[100%] flex flex-col items-center  justify-center pt-10 gap-6" >
+        <div className="flex flex-col items-center pt-10 gap-6" >
             <Views />
-            <div className='flex sm:flex-wrap mt-6 gap-6 mb-6'>
-                <div className="flex flex-col gap-6 sm:justify-start justify-center ">
+            <div className='flex flex-col md:flex-row mt-6 gap-6'>
+                <div className="flex flex-col gap-6">
                     <Ad />
                     <SupportLine />
                 </div>

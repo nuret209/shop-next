@@ -13,7 +13,7 @@ interface CafeProps {
 export default function Cafe({ favorite, title, distance, date, price, rates }: CafeProps) {
     const [heartActive, setheartActive] = React.useState(false);
     return (<>
-        <div className="cafe sm:mr-[18px] mb-[40px] max-w-[270px] relative text-[15px] text-[#717171]">
+        <div className="cafe sm:mr-[18px] flex-grow mb-[40px] w-[270px] max-w-[350px] relative text-[15px] text-[#717171]">
             {favorite && <span className="fav absolute bg-[#fff] text-[#000] font-medium w-[126px] h-[28px] flex items-center justify-center rounded-[40px] top-[12px] left-[12px] border-[1px] border-[solid] border-[#fff] bg-[linear-gradient(45deg,_#f1f1f1_0%,_#fff_11%,_#fff_70%,_#efefef_94%)] [box-shadow:0px_4px_10px_rgba(0,_0,_0,_0.16)]">Guests Favorite</span>}
             <Image priority={true} className="rounded-[12px] mb-[12px]" alt="house" src={imgData} />
             <div className={`heart h-[20px] w-[23px] text-[23px] absolute right-[16px] bg-transparent top-[16px] cursor-pointer ${!heartActive && "opacity-50"}`} onClick={() => setheartActive(!heartActive)}>
