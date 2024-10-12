@@ -2,10 +2,10 @@
 import iller from "@/data/iller.json"
 import ilceler from "@/data/ilceler.json"
 //
-import Pop_up from "@/components/Pop_up"
+import Pop_up from "@/components/ui/home/Pop_up"
 import React, { useEffect } from "react"
 import Image from "next/image"
-import { getFullName, getProfileImage } from "../lib/User"
+import { getFullName, getProfileImage } from "../../../lib/User"
 const TopComponent = () => {
   const [city, setCity] = React.useState(0);
   const [pop_upActive, setPop_upActive] = React.useState(false);

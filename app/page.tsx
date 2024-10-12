@@ -1,8 +1,8 @@
 'use client'
 
-import TopBanner from "@/components/TopBanner"
-import TopComponent from "@/components/TopComponent";
-import MainComponent from "@/components/MainComponent";
+import TopBanner from "@/components/ui/home/TopBanner"
+import TopComponent from "@/components/ui/home/TopComponent";
+import MainComponent from "@/components/ui/home/MainComponent";
 import { useEffect } from "react";
 import { sign } from "@/lib/sign";
 
