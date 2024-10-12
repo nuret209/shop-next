@@ -5,7 +5,7 @@ import { DasboardContext } from "@/components/ui/dashboard/context"
 import { useEffect, useState } from "react"
 import { Poppins } from 'next/font/google'
 import { getUserName } from "@/lib/User"
-import { useRouter } from "next/navigation"
+//import { useRouter } from "next/navigation"
 interface DashboardProps {
   params: {
     username: string
@@ -18,10 +18,11 @@ const popp = Poppins({
 const Page = ({ params }: DashboardProps) => {
   const [timeId, setTimeId] = useState(0);
   const [page, setPage] = useState(0);
-  const router = useRouter();
+  //const router = useRouter();
   useEffect(() => {
     getUserName().then(username => {
-      if (username == "undefined" || params.username == "undefined" || username !== params.username) router.push("/dashboard/register")
+   //   if (username == "undefined" || params.username == "undefined" || username !== params.username) router.push("/dashboard/register")
+console.log(username);
 
     });
   })

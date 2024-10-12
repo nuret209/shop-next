@@ -7,11 +7,11 @@ import { useRouter } from 'next/navigation';
 import { getUserName } from '@/lib/User';
 const Page = () => {
   useEffect(() => {
-    getUserName().then(user => {
+  /*  getUserName().then(user => {
       if (user !== "undefined") router.push(`/dashboard/${user}`);
 
     }
-    );
+    );*/
 
   })
   const [error, setError] = useState("");

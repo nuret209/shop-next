@@ -7,14 +7,13 @@ import React, { FormEvent, useEffect, useState } from 'react'
 import { registerPrisma } from '@/lib/registerOrg';
 import { useSignUp } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { getUserName } from '@/lib/User';
+//import { getUserName } from '@/lib/User';
 const Page = () => {
   useEffect(() => {
-    getUserName().then(user => {
-      if (user !== "undefined") router.push(`/dashboard/${user}`);
-
+   /* getUserName().then(user => {
+      //if (user !== "undefined") router.push(`/dashboard/${user}`)
     }
-    );
+    );*/
 
   })
   const router = useRouter();
@@ -69,6 +68,7 @@ const Page = () => {
         console.log(JSON.stringify(completeSignUp, null, 2));
       }
       if (completeSignUp.status === "complete") {
+        setError("please wait...")
         await setActive({ session: completeSignUp.createdSessionId })
         await registerPrisma(formData);
         router.push(`/dashboard/${formData.name}`);
