@@ -2,7 +2,8 @@
 import { TbWorld } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import { Tab, TabGroup, TabList, } from '@headlessui/react'
-import { DasboardContext, useContext } from "./context";
+import { useContext } from "react";
+import { DasboardContext} from "./context";
 const timeSelect = ["Bügün", "Dün", "Bu Hafta", "Bu Ay", "Bu Yıl"];
 const TopComponent = () => {
   const { timeId , setTimeId } = useContext(DasboardContext);
