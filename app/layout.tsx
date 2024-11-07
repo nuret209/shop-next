@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "wagmigg - shop",
   description: "The page of wagmigg shop",
 };
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin']});
 
 export default function RootLayout({
   children,

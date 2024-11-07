@@ -27,7 +27,8 @@ const MainComponent = () => {
                         )
                         )}
                     </TabGroup>
-                    <div className="cafes flex flex-wrap justify-center sm:justify-normal max-w-full">
+                    <div className="cafes 
+                    grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] max-w-full">
                         {Cafes.map((cafe, index: number) => (cafe.type == activetab &&
                             <Cafe key={index}
                                 favorite={cafe.favorite}

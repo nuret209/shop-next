@@ -6,6 +6,13 @@ import Pop_up from "@/components/ui/home/Pop_up"
 import React, { useEffect } from "react"
 import Image from "next/image"
 import { getFullName, getProfileImage } from "../../../lib/User"
+import { TfiMenu } from "react-icons/tfi";
+import { RiSearchLine } from "react-icons/ri";
+
+
+
+
+
 const TopComponent = () => {
   const [city, setCity] = React.useState(0);
   const [pop_upActive, setPop_upActive] = React.useState(false);
@@ -30,16 +37,17 @@ const TopComponent = () => {
           <option value="">İlçe</option>
           {ilceler.map(ilce => (city == +ilce.il_id && <option key={ilce.id} value={ilce.id}>{ilce.name}</option>))}
         </select>
-        <div className="searchIcon stroke-[white] sm:h-[32px] h-[22px] w-[22px] sm:w-[32px] mr-[4px] sm:mr-[6px] bg-[#0a0d14] rounded-[100px] flex items-center justify-center ml-2 sm:ml-[16px]" >
-          <Image src="/images/searchIcon.svg" alt="Site Logo" width={20} height={21} />
+        <div className="searchIcon text-[white] sm:h-[32px] h-[22px] w-[22px] sm:w-[32px] mr-[4px] sm:mr-[6px] bg-[#0a0d14] rounded-[100px] flex items-center justify-center ml-2 sm:ml-[16px]" >
+        <RiSearchLine size={16} />
+
 
         </div>
       </div>
       <div className="userPanel relative">
         <div onClick={() => setPop_upActive(!pop_upActive)} className="icons w-[86px] h-[44px] flex cursor-pointer rounded-[100px] border-[1px] border-[solid] border-[#ddd] items-center justify-center relative">
-          <Image src="/images/menu.svg" className="mr-2" alt="Site Logo" width={16} height={16} />
-          {profileImage ?
-            <img src={profileImage} width={32} height={32} className="rounded-full" alt="Profile Image" />
+     <TfiMenu className="mr-2" size={16} />
+        {profileImage ?
+            <Image src={profileImage} width={32} height={32} className="rounded-full" alt="Profile Image" />
             : <Image src="/images/userLogo.svg" className="mr-2" alt="Site Logo" width={32} height={32} />
           }
         </div>

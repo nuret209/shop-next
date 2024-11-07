@@ -1,24 +1,26 @@
 "use client"
+import DashboardHome from '@/components/ui/dashboard/DashboardHome'
 import { getFullName } from '@/lib/User'
-import { useRouter } from 'next/navigation'
+//import { useRouter } from 'next/navigation'
 import React, { useEffect } from 'react'
 
 const Page = () => {
-    const router = useRouter();
+  //  const router = useRouter();
     useEffect(() => {
         getFullName().then(res => {
             console.log(res);
-            if (res == "undefined" || res == "null") {
-                console.log("hesap yok");
-
-                router.push("/dashboard/register")
-            }
+            /*   if (res == "undefined" || res == "null") {
+                   console.log("hesap yok");
+                   router.push("/dashboard/register")
+               }*/
         }
         );
     })
 
     return (
-        <div></div>
+        <div className='font-medium'>
+            <DashboardHome />
+        </div>
     )
 }
 
