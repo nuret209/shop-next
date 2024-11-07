@@ -18,7 +18,7 @@ const Page = () => {
     })
 
     return (
-        <div className='font-medium sm:flex sm:justify-center sm:items-center sm:h-full'>
+        <div className='font-medium sm:flex sm:justify-center sm:items-center h-full '>
             <DashboardHome />
         </div>
     )
