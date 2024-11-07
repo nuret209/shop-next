@@ -28,10 +28,10 @@ const DashboardHome = () => {
                     </div>
                 )}
             </div>
-            <button className='hover:underline mt-[37px] sm:w-full w-[108px] bg-[#0A0D14] flex p-[10px] justify-center items-center gap-x-2 text-white [box-shadow:0px_1px_2px_0px_rgba(94,_251,_55,_0.08)] rounded-[10px]'>
+            <a href='/dashboard/register' className='hover:underline cursor-pointer mt-[37px] sm:w-full w-[108px] bg-[#0A0D14] flex p-[10px] justify-center items-center gap-x-2 text-white [box-shadow:0px_1px_2px_0px_rgba(94,_251,_55,_0.08)] rounded-[10px]'>
                 Başlayın
                 <FaArrowRight />
-            </button>
+            </a>
         </div>
 
     )
