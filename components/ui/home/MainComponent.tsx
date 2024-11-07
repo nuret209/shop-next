@@ -28,7 +28,7 @@ const MainComponent = () => {
                         )}
                     </TabGroup>
                     <div className="cafes 
-                    grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] max-w-full">
+                    grid grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] gap-x-[18px]  gap-y-[40px] sm:pl-0  px-[18px] max-w-full">
                         {Cafes.map((cafe, index: number) => (cafe.type == activetab &&
                             <Cafe key={index}
                                 favorite={cafe.favorite}

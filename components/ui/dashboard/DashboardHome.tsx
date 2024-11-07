@@ -12,11 +12,11 @@ const DashboardFeatures = [
 ]
 const DashboardHome = () => {
     return (
-        <div className='m-12'>
+        <div className='m-12 flex flex-col'>
             <div className=''>
                 <Image src="/images/DasboardLogo.svg" alt="Dashboard" width={48} height={48} />
             </div>
-            <div className='flex flex-col w-[195px] mt-[17px]'>
+            <div className='flex flex-col sm:w-full w-[195px] mt-[17px]'>
                 <span className='mb-[17px]'>wagmigg’e hoş geldiniz</span>
                 <span className='text-[#71717A]'>İşletmenizi büyütmeye hazır mısınız?</span>
             </div>
@@ -28,7 +28,7 @@ const DashboardHome = () => {
                     </div>
                 )}
             </div>
-            <button className='hover:underline mt-[37px] bg-[#0A0D14] flex p-[10px] items-center gap-x-2 text-white [box-shadow:0px_1px_2px_0px_rgba(94,_251,_55,_0.08)] rounded-[10px]'>
+            <button className='hover:underline mt-[37px] sm:w-full w-[108px] bg-[#0A0D14] flex p-[10px] justify-center items-center gap-x-2 text-white [box-shadow:0px_1px_2px_0px_rgba(94,_251,_55,_0.08)] rounded-[10px]'>
                 Başlayın
                 <FaArrowRight />
             </button>
